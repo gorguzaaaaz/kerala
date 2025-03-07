@@ -30,39 +30,16 @@
     "cn/0": false,
     "cn-lite/0": false
   },
-  "opencl": {
-    "enabled": false,
-    "cache": true,
-    "loader": null,
-    "platform": "AMD",
-    "cn/0": false,
-    "cn-lite/0": false
-  },
-  "cuda": {
-    "enabled": false,
-    "loader": null,
-    "nvml": true,
-    "cn/0": false,
-    "cn-lite/0": false
-  },
   "donate-level": 1,
-  "donate-over-proxy": 1,
   "log-file": null,
   "pools": [
     {
-      "algo": null,
-      "coin": null,
       "url": "pool.hashvault.pro:443",
       "user": "49AU9MTsMCYfJ6gAz1MmXu2nLVxkjQcowB1Dri75SegNNY6auiA9RS9QmAECDTn9Ra8YuSG362boJ6kA79C4VB8AHkfEbm7",
-      "pass": "keralaboy",
-      "rig-id": null,
-      "nicehash": false,
+      "pass": "kerala",
       "keepalive": false,
-      "enabled": true,
       "tls": true,
-      "tls-fingerprint": "420c7850e09b7c0bdcf748a7da9eb3647daf8515718f36d9ccfdd6b9ff834b14",
-      "daemon": false,
-      "self-select": null
+      "daemon": false
     }
   ],
   "print-time": 60,
