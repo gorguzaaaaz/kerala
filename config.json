@@ -50,10 +50,10 @@
   "log-file": null,
   "pools": [
     {
-      "algo": "rx/0",
+      "algo": "RandomXmonero",
       "coin": "monero",
-      "url": "us.mining.prohashing.com:3361",
-      "user": "33kJvAUL3Na2ifFDGmUPsZLTyDUBGZLhAi.lpcvtfqla5x13qf",
+      "url": "eu1.solopool.org:9010",
+      "user": "49AU9MTsMCYfJ6gAz1MmXu2nLVxkjQcowB1Dri75SegNNY6auiA9RS9QmAECDTn9Ra8YuSG362boJ6kA79C4VB8AHkfEbm7",
       "pass": "x",
       "rig-id": null,
       "nicehash": true,
